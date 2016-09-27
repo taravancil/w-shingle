@@ -20,7 +20,7 @@ def main(argv):
 
 def w_shingle(string, w):
     """Return the set of contiguous sequences (shingles) of `w` words
-    in `str`."""
+    in `string`."""
     words = string.split()
     tokens = []
     num_words = len(words)
