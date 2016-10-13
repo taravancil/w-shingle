@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import argparse
 
+
 def main(argv):
     # Define arguments
     parser = argparse.ArgumentParser(description="Transform a \
@@ -18,13 +19,12 @@ def main(argv):
         print err
         parser.print_help()
 
+
 def w_shingle(string, w):
     """Return the set of contiguous sequences (shingles) of `w` words
     in `string`."""
     words = string.split()
-    tokens = []
     num_words = len(words)
-    i = 0
 
     # Confirm that 0 < `w` <= `num_words`
     if w > num_words or w == 0:
@@ -32,20 +32,8 @@ def w_shingle(string, w):
 
     # If w is equal to the number of words in the input string, the
     # only item in the set is `words`.
-    if w == num_words:
-        tokens.append(words)
-        return tokens
+    return [words[i:i + w] for i in range(len(words) - w + 1)]
 
-    while i <= num_words - w:
-        # Get a token of w words
-        token = words[i:i+w]
-
-        if token not in tokens:
-            tokens.append(token)
-
-        i += 1
-
-    return tokens
 
 if __name__ == "__main__":
     import sys
