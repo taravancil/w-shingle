@@ -34,20 +34,6 @@ def w_shingle(string, w):
     # only item in the set is `words`.
     return [words[i:i + w] for i in range(len(words) - w + 1)]
 
-    # if w == num_words:
-    #     tokens.append(words)
-    #     return tokens
-
-    # while i <= num_words - w:
-    #     # Get a token of w words
-    #     token = words[i:i+w]
-
-    #     if token not in tokens:
-    #         tokens.append(token)
-
-    #     i += 1
-
-    # return tokens
 
 if __name__ == "__main__":
     import sys
