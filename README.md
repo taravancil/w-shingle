@@ -14,8 +14,6 @@ optional arguments:
 ### Example
 
 ``` bash
-user@user-ThinkPad-T400 ~/c/w-shingle> python w_shingle.py "I am an idiot" -w 2
-[['I', 'am'], ['am', 'an'], ['an', 'idiot']]
-user@user-ThinkPad-T400 ~/c/w-shingle> python w_shingle.py "I am an idiot" -w 3
-[['I', 'am', 'an'], ['am', 'an', 'idiot']]
+$ python w_shingle.py "a rose is a rose is a rose" -w 4
+[['a', 'rose', 'is', 'a'], ['rose', 'is', 'a', 'rose'], ['is', 'a', 'rose', 'is'], ['a', 'rose', 'is', 'a'], ['rose', 'is', 'a', 'rose']]
 ```
